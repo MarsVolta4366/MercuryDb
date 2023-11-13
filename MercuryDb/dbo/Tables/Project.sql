@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Project]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[TeamId] INT NOT NULL,
+	[Name] VARCHAR (20) NOT NULL,
+	FOREIGN KEY (TeamId) REFERENCES Team(Id)
+)
