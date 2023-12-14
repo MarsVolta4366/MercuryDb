@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Sprint]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	[Name] VARCHAR (100) NOT NULL,
+	[StartDate] DATE NOT NULL,
+	[EndDate] DATE NOT NULL,
+	[ProjectId] INT NOT NULL,
+	FOREIGN KEY (ProjectId) REFERENCES Project(Id) ON DELETE CASCADE
+)
