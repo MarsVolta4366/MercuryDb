@@ -9,8 +9,7 @@
 	[Content] VARCHAR (1000) NULL,
 	[Points] INT NULL,
 	FOREIGN KEY (ProjectId) REFERENCES Project(Id) ON DELETE CASCADE,
-	FOREIGN KEY (UserId) REFERENCES [User](Id) ON DELETE CASCADE,
+	FOREIGN KEY (UserId) REFERENCES [User](Id) ON DELETE SET NULL,
 	FOREIGN KEY (StatusId) REFERENCES [Status](Id) ON DELETE CASCADE,
-	-- Don't delete ticket on sprint deletion, just want sprint id to turn null.
 	FOREIGN KEY (SprintId) REFERENCES [Sprint](Id)
 )
